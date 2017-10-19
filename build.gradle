@@ -3,6 +3,9 @@ apply plugin: 'application'
 
 mainClassName = "is.ru.hugb.calc.CalcWeb"
 
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
 repositories {
     jcenter()
 }
